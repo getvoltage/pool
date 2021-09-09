@@ -2483,6 +2483,98 @@ func (s *rpcServer) DecodeSidecarTicket(ctx context.Context,
 	return marshallTicket(ticket), nil
 }
 
+// ListSidecars lists all sidecar tickets currently in the local database. This
+// includes tickets offered by our node as well as tickets that our node is the
+// recipient of.
+func (s *rpcServer) ListSidecars(_ context.Context,
+	_ *poolrpc.ListSidecarsRequest) (*poolrpc.ListSidecarsResponse,
+	error) {
+
+	tickets, err := s.server.db.Sidecars()
+	if err != nil {
+		return nil, fmt.Errorf("error reading sidecar tickets: %v", err)
+	}
+
+	resp := &poolrpc.ListSidecarsResponse{
+		Tickets: make([]*poolrpc.DecodedSidecarTicket, len(tickets)),
+	}
+	for idx, ticket := range tickets {
+		resp.Tickets[idx] = marshallTicket(ticket)
+	}
+
+	return resp, nil
+}
+
+// CancelSidecar cancels the execution of a specific sidecar ticket. Depending
+// on the state of the sidecar ticket its associated bid order might be
+// canceled as well (if this ticket was offered by our node).
+func (s *rpcServer) CancelSidecar(ctx context.Context,
+	req *poolrpc.CancelSidecarRequest) (*poolrpc.CancelSidecarResponse,
+	error) {
+
+	tickets, err := s.server.db.Sidecars()
+	if err != nil {
+		return nil, fmt.Errorf("error reading sidecar tickets: %v", err)
+	}
+
+	var ticket *sidecar.Ticket
+	for _, t := range tickets {
+		if !bytes.Equal(t.ID[:], req.SidecarId) {
+			continue
+		}
+
+		ticket = t
+		break
+	}
+
+	if ticket == nil {
+		return nil, fmt.Errorf("no ticket with ID %x found",
+			req.SidecarId)
+	}
+
+	// No use canceling a ticket that is already in a terminal state.
+	if ticket.State.IsTerminal() {
+		return nil, fmt.Errorf("cannot cancel ticket with ID %x, "+
+			"already in state %v", ticket.ID[:], ticket.State)
+	}
+
+	// In case we are offering the ticket, we might also need to cancel the
+	// order we created for it. This will also update the ticket state and
+	// inform the sidecar acceptor. But those operations are idempotent, so
+	// it doesn't matter. Canceling the order will make sure we aren't
+	// getting matched again. In case the auctioneer doesn't accept order
+	// cancellations at the moment (because it is currently processing a
+	// batch), this operation will fail and will need to be repeated by the
+	// user.
+	if ticket.State >= sidecar.StateOrdered && ticket.Order != nil {
+		_, err = s.CancelOrder(ctx, &poolrpc.CancelOrderRequest{
+			OrderNonce: ticket.Order.BidNonce[:],
+		})
+		if err != nil {
+			return nil, fmt.Errorf("error canceling order %x for "+
+				"sidecar ticket %x: %v",
+				ticket.Order.BidNonce[:], ticket.ID[:], err)
+		}
+	}
+
+	// Set the state to canceled and update our local database. This will
+	// also delete any bid template in the sidecar bucket if it existed.
+	ticket.State = sidecar.StateCanceled
+	if err := s.server.db.UpdateSidecar(ticket); err != nil {
+		return nil, fmt.Errorf("error updating sidecar ticket with ID "+
+			"%x to state %d: %v", ticket.ID[:], ticket.State, err)
+	}
+
+	// In addition to updating the ticket, we'll also signal to the acceptor
+	// that the channel that we were a provider of has been finalized so the
+	// state machine can terminate. This is a no-op if the ticket isn't
+	// registered with the acceptor because we are offering and not
+	// receiving it.
+	s.server.sidecarAcceptor.FinalizeTicket(ticket)
+
+	return &poolrpc.CancelSidecarResponse{}, nil
+}
+
 // setTicketStateForOrder updates the sidecar ticket state we have for a given
 // order in our local database to the new state.
 func (s *rpcServer) setTicketStateForOrder(newState sidecar.State,

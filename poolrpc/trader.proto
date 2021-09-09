@@ -191,6 +191,20 @@ service Trader {
     for a more human-readable representation.
     */
     rpc DecodeSidecarTicket (SidecarTicket) returns (DecodedSidecarTicket);
+
+    /* pool: `sidecar list`
+    ListSidecars lists all sidecar tickets currently in the local database. This
+    includes tickets offered by our node as well as tickets that our node is the
+    recipient of.
+    */
+    rpc ListSidecars (ListSidecarsRequest) returns (ListSidecarsResponse);
+
+    /* pool: `sidecar cancel`
+    CancelSidecar cancels the execution of a specific sidecar ticket. Depending
+    on the state of the sidecar ticket its associated bid order might be
+    canceled as well (if this ticket was offered by our node).
+    */
+    rpc CancelSidecar (CancelSidecarRequest) returns (CancelSidecarResponse);
 }
 
 message InitAccountRequest {
@@ -1228,4 +1242,18 @@ message ExpectSidecarChannelRequest {
 }
 
 message ExpectSidecarChannelResponse {
+}
+
+message ListSidecarsRequest {
+}
+
+message ListSidecarsResponse {
+    repeated DecodedSidecarTicket tickets = 1;
+}
+
+message CancelSidecarRequest {
+    bytes sidecar_id = 1;
+}
+
+message CancelSidecarResponse {
 }
