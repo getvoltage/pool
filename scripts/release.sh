@@ -10,7 +10,7 @@
 set -e
 
 POOLD_VERSION_REGEX="poold version (.+) commit"
-PKG="github.com/lightninglabs/pool"
+PKG="github.com/getvoltage/pool"
 PACKAGE=pool
 
 # green prints one line of green text (if the terminal supports it).

@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lightninglabs/pool/event"
-	"github.com/lightninglabs/pool/order"
+	"github.com/getvoltage/pool/event"
+	"github.com/getvoltage/pool/order"
 	"github.com/stretchr/testify/require"
 	"go.etcd.io/bbolt"
 )

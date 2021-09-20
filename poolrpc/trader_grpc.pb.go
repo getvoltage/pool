@@ -4,7 +4,7 @@ package poolrpc
 
 import (
 	context "context"
-	auctioneerrpc "github.com/lightninglabs/pool/auctioneerrpc"
+	auctioneerrpc "github.com/getvoltage/pool/auctioneerrpc"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

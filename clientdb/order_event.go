@@ -5,10 +5,10 @@ import (
 	"io"
 	"time"
 
-	"github.com/lightninglabs/pool/auctioneerrpc"
-	"github.com/lightninglabs/pool/event"
-	"github.com/lightninglabs/pool/order"
-	"github.com/lightninglabs/pool/poolrpc"
+	"github.com/getvoltage/pool/auctioneerrpc"
+	"github.com/getvoltage/pool/event"
+	"github.com/getvoltage/pool/order"
+	"github.com/getvoltage/pool/poolrpc"
 	"go.etcd.io/bbolt"
 )
 

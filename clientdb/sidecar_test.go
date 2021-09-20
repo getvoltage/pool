@@ -3,8 +3,8 @@ package clientdb
 import (
 	"testing"
 
-	"github.com/lightninglabs/pool/order"
-	"github.com/lightninglabs/pool/sidecar"
+	"github.com/getvoltage/pool/order"
+	"github.com/getvoltage/pool/sidecar"
 	"github.com/stretchr/testify/require"
 )
 

@@ -4,7 +4,7 @@ import "auctioneerrpc/auctioneer.proto";
 
 package poolrpc;
 
-option go_package = "github.com/lightninglabs/pool/poolrpc";
+option go_package = "github.com/getvoltage/pool/poolrpc";
 
 service Trader {
     /* pool: `getinfo`

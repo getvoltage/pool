@@ -2,7 +2,7 @@ package account
 
 import (
 	"github.com/btcsuite/btclog"
-	"github.com/lightninglabs/pool/account/watcher"
+	"github.com/getvoltage/pool/account/watcher"
 	"github.com/lightningnetwork/lnd/build"
 )
 

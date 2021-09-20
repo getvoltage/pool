@@ -6,8 +6,8 @@ import (
 	"fmt"
 
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/lightninglabs/pool/auctioneerrpc"
-	"github.com/lightninglabs/pool/poolrpc"
+	"github.com/getvoltage/pool/auctioneerrpc"
+	"github.com/getvoltage/pool/poolrpc"
 	"github.com/urfave/cli"
 )
 

@@ -1,7 +1,7 @@
 FROM golang:1.14-alpine as builder
 
 # Copy in the local repository to build from.
-COPY . /go/src/github.com/lightninglabs/pool
+COPY . /go/src/github.com/getvoltage/pool
 
 # Force Go to use the cgo based DNS resolver. This is required to ensure DNS
 # queries required to connect to linked containers succeed.
@@ -14,7 +14,7 @@ ENV GO111MODULE on
 RUN apk add --no-cache --update alpine-sdk \
     git \
     make \
-&&  cd /go/src/github.com/lightninglabs/pool \
+&&  cd /go/src/github.com/getvoltage/pool \
 &&  make install
 
 # Start a new, final image to reduce size.

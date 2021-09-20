@@ -13,9 +13,9 @@ import (
 	"io"
 	"net/http"
 
+	"github.com/getvoltage/pool/auctioneerrpc"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/utilities"
-	"github.com/lightninglabs/pool/auctioneerrpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/grpclog"

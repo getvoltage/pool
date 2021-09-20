@@ -6,7 +6,7 @@ syntax = "proto3";
 // can have different golang and RPC package names.
 package poolrpc;
 
-option go_package = "github.com/lightninglabs/pool/auctioneerrpc";
+option go_package = "github.com/getvoltage/pool/auctioneerrpc";
 
 service ChannelAuctioneer {
     rpc ReserveAccount (ReserveAccountRequest) returns (ReserveAccountResponse);

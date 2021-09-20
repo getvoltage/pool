@@ -1,4 +1,4 @@
-PKG := github.com/lightninglabs/pool
+PKG := github.com/getvoltage/pool
 ESCPKG := github.com\/lightninglabs\/pool
 
 LINT_PKG := github.com/golangci/golangci-lint/cmd/golangci-lint

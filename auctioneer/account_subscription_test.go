@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/btcsuite/btcd/btcec"
-	"github.com/lightninglabs/pool/auctioneerrpc"
-	"github.com/lightninglabs/pool/internal/test"
+	"github.com/getvoltage/pool/auctioneerrpc"
+	"github.com/getvoltage/pool/internal/test"
 	"github.com/lightningnetwork/lnd/keychain"
 )
 

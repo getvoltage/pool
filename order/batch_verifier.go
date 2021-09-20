@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/btcsuite/btcd/btcec"
+	"github.com/getvoltage/pool/account"
+	"github.com/getvoltage/pool/terms"
 	"github.com/lightninglabs/lndclient"
-	"github.com/lightninglabs/pool/account"
-	"github.com/lightninglabs/pool/terms"
 )
 
 const (

@@ -9,9 +9,9 @@ import (
 
 	"github.com/btcsuite/btcutil"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/lightninglabs/pool/account"
-	"github.com/lightninglabs/pool/order"
-	"github.com/lightninglabs/pool/terms"
+	"github.com/getvoltage/pool/account"
+	"github.com/getvoltage/pool/order"
+	"github.com/getvoltage/pool/terms"
 	"github.com/stretchr/testify/require"
 	"go.etcd.io/bbolt"
 )

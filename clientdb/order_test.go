@@ -8,8 +8,8 @@ import (
 
 	"github.com/btcsuite/btcutil"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/lightninglabs/pool/order"
-	"github.com/lightninglabs/pool/sidecar"
+	"github.com/getvoltage/pool/order"
+	"github.com/getvoltage/pool/sidecar"
 	"github.com/lightningnetwork/lnd/keychain"
 	"github.com/lightningnetwork/lnd/lntypes"
 	"github.com/lightningnetwork/lnd/lnwallet/chainfee"

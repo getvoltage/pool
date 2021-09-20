@@ -6,12 +6,12 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/lightninglabs/pool"
-	"github.com/lightninglabs/pool/auctioneer"
-	"github.com/lightninglabs/pool/clientdb"
-	"github.com/lightninglabs/pool/order"
-	"github.com/lightninglabs/pool/poolrpc"
-	"github.com/lightninglabs/pool/terms"
+	"github.com/getvoltage/pool"
+	"github.com/getvoltage/pool/auctioneer"
+	"github.com/getvoltage/pool/clientdb"
+	"github.com/getvoltage/pool/order"
+	"github.com/getvoltage/pool/poolrpc"
+	"github.com/getvoltage/pool/terms"
 	"github.com/lightningnetwork/lnd/lncfg"
 	"github.com/urfave/cli"
 )

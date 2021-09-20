@@ -8,7 +8,7 @@ The `poold` trader daemon can be run either as a standalone binary connected to 
 
 ### Downloading the standalone binaries
 
-The latest official release binaries can be [downloaded from the GitHub releases page](https://github.com/lightninglabs/pool/releases).
+The latest official release binaries can be [downloaded from the GitHub releases page](https://github.com/getvoltage/pool/releases).
 
 ### Downloading as part of Lightning Terminal \(LiT\)
 
@@ -21,7 +21,7 @@ To build both the `poold` and `pool` binaries from the source code, at least the
 To download the code, compile and install it, the following commands can then be run:
 
 ```text
-$ git clone https://github.com/lightninglabs/pool
+$ git clone https://github.com/getvoltage/pool
 $ cd pool
 $ make install
 ```

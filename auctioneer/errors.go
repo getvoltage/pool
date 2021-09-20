@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/btcsuite/btcutil"
-	"github.com/lightninglabs/pool/auctioneerrpc"
+	"github.com/getvoltage/pool/auctioneerrpc"
 )
 
 var (

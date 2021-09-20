@@ -4,8 +4,8 @@ import (
 	"github.com/btcsuite/btcd/blockchain"
 	"github.com/btcsuite/btcutil"
 	"github.com/btcsuite/btcwallet/wallet/txrules"
-	"github.com/lightninglabs/pool/poolscript"
-	"github.com/lightninglabs/pool/terms"
+	"github.com/getvoltage/pool/poolscript"
+	"github.com/getvoltage/pool/terms"
 	"github.com/lightningnetwork/lnd/input"
 	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
 )

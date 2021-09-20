@@ -11,8 +11,8 @@ import (
 	"github.com/btcsuite/btcd/wire"
 	"github.com/btcsuite/btcutil"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/lightninglabs/pool/account"
-	"github.com/lightninglabs/pool/poolscript"
+	"github.com/getvoltage/pool/account"
+	"github.com/getvoltage/pool/poolscript"
 	"github.com/lightningnetwork/lnd/keychain"
 )
 

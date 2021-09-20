@@ -6,9 +6,9 @@ import (
 
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightninglabs/pool/internal/test"
-	"github.com/lightninglabs/pool/poolscript"
-	"github.com/lightninglabs/pool/sidecar"
+	"github.com/getvoltage/pool/internal/test"
+	"github.com/getvoltage/pool/poolscript"
+	"github.com/getvoltage/pool/sidecar"
 	"github.com/lightningnetwork/lnd/input"
 	"github.com/lightningnetwork/lnd/keychain"
 	"github.com/stretchr/testify/require"

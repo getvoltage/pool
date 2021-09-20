@@ -36,7 +36,7 @@ function generate() {
     # Generate the JSON/WASM client stubs.
     falafel=$(which falafel)
     pkg="poolrpc"
-    manual_import="github.com/lightninglabs/pool/auctioneerrpc"
+    manual_import="github.com/getvoltage/pool/auctioneerrpc"
     opts="package_name=$pkg,manual_import=$manual_import,api_prefix=1,js_stubs=1,build_tags=// +build js"
     protoc -I/usr/local/include -I. -I.. \
            --plugin=protoc-gen-custom=$falafel\

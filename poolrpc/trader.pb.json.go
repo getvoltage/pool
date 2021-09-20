@@ -8,8 +8,8 @@ package poolrpc
 import (
 	"context"
 
+	"github.com/getvoltage/pool/auctioneerrpc"
 	gateway "github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
-	"github.com/lightninglabs/pool/auctioneerrpc"
 	"google.golang.org/grpc"
 	"google.golang.org/protobuf/encoding/protojson"
 )

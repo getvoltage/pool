@@ -11,10 +11,10 @@ import (
 	"time"
 
 	"github.com/btcsuite/btcutil"
+	"github.com/getvoltage/pool/account"
+	"github.com/getvoltage/pool/sidecar"
+	"github.com/getvoltage/pool/terms"
 	"github.com/lightninglabs/lndclient"
-	"github.com/lightninglabs/pool/account"
-	"github.com/lightninglabs/pool/sidecar"
-	"github.com/lightninglabs/pool/terms"
 	"github.com/lightningnetwork/lnd/keychain"
 	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
 	"github.com/lightningnetwork/lnd/tor"

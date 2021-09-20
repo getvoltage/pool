@@ -4,7 +4,7 @@
 
 ### Download the standalone binaries
 
-The latest official release binaries can be [downloaded from the GitHub releases page](https://github.com/lightninglabs/pool/releases).
+The latest official release binaries can be [downloaded from the GitHub releases page](https://github.com/getvoltage/pool/releases).
 
 ### Download Lightning Terminal \(LiT\)
 

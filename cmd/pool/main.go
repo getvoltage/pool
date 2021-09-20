@@ -13,9 +13,9 @@ import (
 	"strings"
 
 	"github.com/btcsuite/btcutil"
+	"github.com/getvoltage/pool"
+	"github.com/getvoltage/pool/poolrpc"
 	"github.com/lightninglabs/lndclient"
-	"github.com/lightninglabs/pool"
-	"github.com/lightninglabs/pool/poolrpc"
 	"github.com/lightninglabs/protobuf-hex-display/json"
 	"github.com/lightninglabs/protobuf-hex-display/jsonpb"
 	"github.com/lightninglabs/protobuf-hex-display/proto"

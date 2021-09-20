@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/getvoltage/pool/order"
 	"github.com/lightninglabs/lndclient"
-	"github.com/lightninglabs/pool/order"
 	"github.com/lightningnetwork/lnd/lnwire"
 )
 

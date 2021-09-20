@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/btcsuite/btcd/btcec"
-	"github.com/lightninglabs/pool/account"
+	"github.com/getvoltage/pool/account"
 )
 
 type mockStore struct {

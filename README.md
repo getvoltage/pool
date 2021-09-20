@@ -15,7 +15,7 @@ a single market while allowing them to maintain custody of their funds.
 
 Checkout our [documentation](https://pool.lightning.engineering/) to learn
 more. For more [technical details, check out the technical white
-paper](https://github.com/lightninglabs/pool-paper/blob/main/liquidity.pdf).
+paper](https://github.com/getvoltage/pool-paper/blob/main/liquidity.pdf).
 
 ## How it works
 Lightning Pool is a non-custodial auction for liquidity where bids are kept
@@ -42,7 +42,7 @@ private and trades clear periodically. Key aspects of Pool include:
 
 ## Installation
 Download the latest binaries from the
-[releases](https://github.com/lightninglabs/pool/releases) page.
+[releases](https://github.com/getvoltage/pool/releases) page.
 
 ## LND
 
@@ -87,7 +87,7 @@ If you’d prefer to compile from source code, you’ll need at least `go 1.14` 
 Run the following commands to download the code, compile and install Pool:
 
 ```shell
-$ git clone https://github.com/lightninglabs/pool
+$ git clone https://github.com/getvoltage/pool
 $ cd pool
 $ make install
 ```

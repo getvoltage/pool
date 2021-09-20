@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/getvoltage/pool"
 	"github.com/jessevdk/go-flags"
-	"github.com/lightninglabs/pool"
 
 	// Blank import to set up profiling HTTP handlers.
 	_ "net/http/pprof"

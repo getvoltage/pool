@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 
-	"github.com/lightninglabs/pool/poolrpc"
+	"github.com/getvoltage/pool/poolrpc"
 	"github.com/urfave/cli"
 )
 

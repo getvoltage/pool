@@ -5,8 +5,8 @@ import (
 
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightninglabs/pool/account"
-	"github.com/lightninglabs/pool/auctioneerrpc"
+	"github.com/getvoltage/pool/account"
+	"github.com/getvoltage/pool/auctioneerrpc"
 )
 
 const (

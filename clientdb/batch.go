@@ -3,8 +3,8 @@ package clientdb
 import (
 	"fmt"
 
-	"github.com/lightninglabs/pool/account"
-	"github.com/lightninglabs/pool/order"
+	"github.com/getvoltage/pool/account"
+	"github.com/getvoltage/pool/order"
 	"go.etcd.io/bbolt"
 )
 

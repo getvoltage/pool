@@ -6,7 +6,7 @@ syntax = "proto3";
 // can have different golang and RPC package names.
 package poolrpc;
 
-option go_package = "github.com/lightninglabs/pool/auctioneerrpc";
+option go_package = "github.com/getvoltage/pool/auctioneerrpc";
 
 // HashMail exposes a simple synchronous network stream that can be used for
 // various types of synchronization and coordination. The service allows

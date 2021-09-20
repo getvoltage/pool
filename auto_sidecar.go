@@ -8,10 +8,10 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/lightninglabs/pool/account"
-	"github.com/lightninglabs/pool/clientdb"
-	"github.com/lightninglabs/pool/order"
-	"github.com/lightninglabs/pool/sidecar"
+	"github.com/getvoltage/pool/account"
+	"github.com/getvoltage/pool/clientdb"
+	"github.com/getvoltage/pool/order"
+	"github.com/getvoltage/pool/sidecar"
 	"github.com/lightningnetwork/lnd/keychain"
 	"github.com/lightningnetwork/lnd/lnwire"
 )

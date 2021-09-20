@@ -9,10 +9,10 @@ import (
 	"strings"
 
 	"github.com/btcsuite/btcutil"
-	"github.com/lightninglabs/pool/auctioneer"
-	"github.com/lightninglabs/pool/order"
-	"github.com/lightninglabs/pool/poolrpc"
-	"github.com/lightninglabs/pool/sidecar"
+	"github.com/getvoltage/pool/auctioneer"
+	"github.com/getvoltage/pool/order"
+	"github.com/getvoltage/pool/poolrpc"
+	"github.com/getvoltage/pool/sidecar"
 	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
 	"github.com/urfave/cli"
 )

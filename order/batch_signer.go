@@ -6,9 +6,9 @@ import (
 
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcd/txscript"
+	"github.com/getvoltage/pool/account"
+	"github.com/getvoltage/pool/poolscript"
 	"github.com/lightninglabs/lndclient"
-	"github.com/lightninglabs/pool/account"
-	"github.com/lightninglabs/pool/poolscript"
 )
 
 // batchSigner is a type that implements the BatchSigner interface and can sign

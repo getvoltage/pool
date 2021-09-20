@@ -7,11 +7,11 @@ import (
 
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcutil"
-	"github.com/lightninglabs/pool/account"
-	"github.com/lightninglabs/pool/auctioneerrpc"
-	"github.com/lightninglabs/pool/internal/test"
-	"github.com/lightninglabs/pool/sidecar"
-	"github.com/lightninglabs/pool/terms"
+	"github.com/getvoltage/pool/account"
+	"github.com/getvoltage/pool/auctioneerrpc"
+	"github.com/getvoltage/pool/internal/test"
+	"github.com/getvoltage/pool/sidecar"
+	"github.com/getvoltage/pool/terms"
 	"github.com/lightningnetwork/lnd/keychain"
 	"github.com/stretchr/testify/require"
 )

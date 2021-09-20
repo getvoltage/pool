@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightninglabs/pool/account"
-	"github.com/lightninglabs/pool/auctioneerrpc"
+	"github.com/getvoltage/pool/account"
+	"github.com/getvoltage/pool/auctioneerrpc"
 	"github.com/lightningnetwork/lnd/keychain"
 	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
 )

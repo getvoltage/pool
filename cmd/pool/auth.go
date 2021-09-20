@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/getvoltage/pool/poolrpc"
 	"github.com/lightninglabs/aperture/lsat"
-	"github.com/lightninglabs/pool/poolrpc"
 	"github.com/urfave/cli"
 	"gopkg.in/macaroon.v2"
 )

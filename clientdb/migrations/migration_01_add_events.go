@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/lightninglabs/pool/event"
+	"github.com/getvoltage/pool/event"
 	"go.etcd.io/bbolt"
 )
 

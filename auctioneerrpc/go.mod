@@ -1,4 +1,4 @@
-module github.com/lightninglabs/pool/auctioneerrpc
+module github.com/getvoltage/pool/auctioneerrpc
 
 go 1.15
 

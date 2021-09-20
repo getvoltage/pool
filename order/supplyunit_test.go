@@ -7,7 +7,7 @@ import (
 	"testing/quick"
 
 	"github.com/btcsuite/btcutil"
-	"github.com/lightninglabs/pool/order"
+	"github.com/getvoltage/pool/order"
 	"github.com/stretchr/testify/require"
 )
 

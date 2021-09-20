@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/btcsuite/btcwallet/wtxmgr"
-	"github.com/lightninglabs/pool/clientdb/migrations"
+	"github.com/getvoltage/pool/clientdb/migrations"
 	"go.etcd.io/bbolt"
 )
 
