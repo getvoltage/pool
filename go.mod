@@ -17,6 +17,7 @@ require (
 	github.com/jessevdk/go-flags v1.4.0
 	github.com/lightninglabs/aperture v0.1.17-beta.0.20220325093943-42b9d4c1be7f
 	github.com/lightninglabs/lndclient v0.15.0-0
+	github.com/juju/loggo v0.0.0-20210728185423-eebad3a902c4 // indirect
 	github.com/lightninglabs/pool/auctioneerrpc v1.0.5
 	github.com/lightninglabs/protobuf-hex-display v1.4.3-hex-display
 	github.com/lightningnetwork/lnd v0.14.1-beta.0.20220324135938-0dcaa511a249
@@ -32,5 +33,9 @@ require (
 	gopkg.in/macaroon-bakery.v2 v2.0.1
 	gopkg.in/macaroon.v2 v2.1.0
 )
+
+replace github.com/lightningnetwork/lnd => github.com/getvoltage/lnd v0.14.1-beta.f1
+
+replace github.com/lightningnetwork/lnd/cert => github.com/getvoltage/lnd/cert v1.0.4-0.20211030022103-82f69775759a
 
 replace github.com/lightninglabs/pool/auctioneerrpc => ./auctioneerrpc
