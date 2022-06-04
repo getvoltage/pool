@@ -127,6 +127,7 @@ func fetchChannelBackup(ctx context.Context, client lndclient.LightningClient,
 	}
 
 	var channelBackup chanbackup.Single
+	chanbackup.Encrypter = lnencrypt.Encrypter{}
 	err = channelBackup.UnpackFromReader(
 		bytes.NewReader(rawChannelBackup), &scbKeyRing{
 			encryptionKey: *scbEncryptionKey,
