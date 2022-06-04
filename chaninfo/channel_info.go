@@ -8,6 +8,7 @@ import (
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/wire"
 	"github.com/lightninglabs/lndclient"
+	"github.com/lightninglabs/lnd/lnencrypt"
 	"github.com/lightningnetwork/lnd/chanbackup"
 )
 
@@ -127,6 +128,7 @@ func fetchChannelBackup(ctx context.Context, client lndclient.LightningClient,
 	}
 
 	var channelBackup chanbackup.Single
+	chanbackup.Encrypter := lnencrypt.Encrypter{}
 	err = channelBackup.UnpackFromReader(
 		bytes.NewReader(rawChannelBackup), &scbKeyRing{
 			encryptionKey: *scbEncryptionKey,
