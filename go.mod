@@ -1,4 +1,4 @@
-module github.com/lightninglabs/pool
+module github.com/voltagecloud/pool
 
 go 1.16
 
